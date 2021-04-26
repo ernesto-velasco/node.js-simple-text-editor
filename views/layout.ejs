@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body>
+    <div class="columns" id="mail-app">
+        <%- include('./partials/aside'); %>
+        <div class="column is-10 messages hero is-fullheight" id="message-feed">
+            <%- include('./partials/breadcrumb'); %>
+            <%- body %>
+        </div>
+    </div>
+</body>
+
+</html>

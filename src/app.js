@@ -16,7 +16,18 @@ app.use(express.urlencoded({
 
 // display a listing of the resource
 app.get("/", (request, response) => {
-    response.send("Index Page")
+    response.render("index")
+})
+
+// show the form for creating a new resource
+app.get("/docs/new", (request, response) => {
+    response.render("docs/create")
+})
+
+// show the form for editing the specified resource
+app.get("/docs/edit/:title(*)", (request, response) => {
+    title = request.params.title
+    response.render("docs/edit")
 })
 
 // display error 404 if the page is not found
