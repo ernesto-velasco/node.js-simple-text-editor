@@ -1,0 +1,23 @@
+<div class="inbox-messages" id="inbox-messages">
+    <div class="card">
+        <div class="card-content">
+            <div class="msg-header">
+                <!-- <span class="msg-from"><small>Date</small></span> -->
+                <span class="msg-timestamp"></span>
+                <p class="buttons msg-attachment">
+                    <button class="button" type="submit" form="form-store">
+                      <span class="icon is-small">
+                        <i class="fa fa-save"></i>
+                      </span>
+                    </button>
+                  </p>
+            </div>
+            <div class="msg-snippet">
+                <form id="form-store" action="/docs/store" method="post">
+                    <input class="input my-2" type="text" name="title" placeholder="Title">
+                    <textarea class="textarea" name="body" placeholder="Body..."></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="inbox-messages" id="inbox-messages">
+    <div class="card">
+        <div class="card-content">
+            <div class="msg-header">
+                <!-- <span class="msg-from"><small>Date</small></span> -->
+                <span class="msg-timestamp"></span>
+                <span class="msg-attachment">
+                    <div class="control is-grouped">
+                        <p class="buttons">
+                            <button class="button" type="submit" form="form-update">
+                              <span class="icon is-small">
+                                <i class="fa fa-save"></i>
+                              </span>
+                            </button>
+                            <button class="button" type="submit" form="form-delete">
+                              <span class="icon is-small">
+                                <i class="fa fa-trash"></i>
+                              </span>
+                            </button>
+                          </p>
+                    </div>
+                </span>
+            </div>
+            <div class="msg-snippet">
+                <form id="form-update" action="/docs/update" method="POST">
+                    <input type="hidden"  name="title" value="<%= title %>">
+                    <input class="input my-2" type="text" name="new_title" placeholder="Title" value="<%= title %>">
+                    <textarea class="textarea" name="new_body" placeholder="Body..."><%= data %></textarea>
+                </form>
+                <form id="form-delete" action="/docs/delete" method="POST">
+                    <input type="hidden" name="title" value="<%= title %>">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

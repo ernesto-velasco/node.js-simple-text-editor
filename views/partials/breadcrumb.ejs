@@ -1,0 +1,9 @@
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      <% breadcrumb.forEach((bread, i )=> { %>
+        <li class="<%= (i === breadcrumb.length - 1 ? 'is-active' : '') %> "><a href="<%= bread.url %>"><%= bread.name %></a></li>
+      <% }); %>
+    </ul>
+  </nav>
+
+  
