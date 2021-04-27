@@ -74,6 +74,8 @@ const loadNotes = function () {
         const data = fs.readdirSync(path)
         return data;
     } catch (error) {
+        fs.mkdirSync("./storage")
+        fs.mkdirSync(path)
         log("Error, directory does not exists!");
         return [];
     }
