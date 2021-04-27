@@ -1,0 +1,31 @@
+<div class="inbox-messages" id="inbox-messages">
+    <div class="card">
+        <div class="card-content">
+            <div class="msg-header">
+                <!-- <span class="msg-from"><small>Date</small></span> -->
+                <span class="msg-timestamp"></span>
+                <p class="buttons msg-attachment">
+                    <a href="/docs/edit/<%= title  %>" class="button">
+                        <span class="icon is-small">
+                            <i class="fa fa-edit"></i>
+                          </span>
+                    </a>
+                    <button class="button" type="submit" form="form-delete">
+                      <span class="icon is-small">
+                        <i class="fa fa-trash"></i>
+                      </span>
+                    </button>
+                  </p>
+            </div>
+            <div class="msg-subject">
+                <span class="msg-subject"><strong id="fake-subject-1"><%= title.toUpperCase()  %></strong></span>
+            </div>
+            <div class="msg-snippet">
+                <p id="fake-snippet-1"><%= data %></p>
+            </div>
+        </div>
+    </div>
+    <form id="form-delete" action="/docs/delete" method="POST">
+        <input type="hidden" name="title" value="<%= title %>">
+    </form>
+</div>

@@ -2,16 +2,14 @@
     <div>
         <div class="compose has-text-centered">
             <a class="button is-danger is-block is-bold" href="/docs/new">
-                <span class="compose">Compose</span>
+                <span class="compose">New File</span>
             </a>
         </div>
         <div class="main">
-            <a href="#" class="item active"><span class="icon"><i class="fa fa-file"></i></span><span class="name">File
-                    name</span></a>
-            <a href="#" class="item"><span class="icon"><i class="fa fa-file"></i></span><span class="name">File
-                    name</span></a>
-            <a href="#" class="item"><span class="icon"><i class="fa fa-file"></i></span><span class="name">File
-                    name</span></a>
+            <div class="is-divider" data-content="Files"></div>
+            <% notes.forEach((note)=> { %>
+                <a href="/docs/read/<%= note.replace(/\.[^/.]+$/,  '') %>" class="item"><span class="icon"><i class="fa fa-file"></i></span><span class="name"><%= note %></span></a>
+                <% }) %>
         </div>
     </div>
 </aside>

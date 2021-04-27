@@ -7,9 +7,13 @@
 
 <body>
     <div class="columns" id="mail-app">
-        <%- include('./partials/aside'); %>
+        <%- include('./partials/aside', {
+            notes: notes
+        }); %>
         <div class="column is-10 messages hero is-fullheight" id="message-feed">
-            <%- include('./partials/breadcrumb'); %>
+            <%- include('./partials/breadcrumb', {
+                breadcrumb: breadcrumb
+            }); %>
             <%- body %>
         </div>
     </div>
